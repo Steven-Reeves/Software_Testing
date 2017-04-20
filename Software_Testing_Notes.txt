@@ -176,6 +176,47 @@ Develop interfaces:
 
 Visual Studio Test Unit Language:
 
+Lab 3 notes:
+Delete class...
+Right click project, add new item, Interface
+Make sure it's public "IStack"
+
+Public interface IStack<T>
+	{
+	void AddSomething(T element);
+	bool IsEmpty();
+	int Length();
+	}
+	
+Right click project, add class, MyStack
+
+	public class MyStack<T> : IStack<T>
+	{
+	//Data variables
+	public Node<T> Head {get; set;}
+	Public Node<T> Tail {get; set}
+	
+	//Constructor
+	Public IStack(params T[] elements)
+	{
+		
+	}
+	
+	//Let Visual Studio generate required methods
+	
+	
+	//internal class
+	public class Node<T>
+	{
+		public T value{get; set;}
+		private Node<T> Next{get; set;}
+	}
+	
+	}
+
+Right click in class, "Create Unit test"
+Test menu -> Test explorer -> run all 
+
 
 
 
