@@ -1,0 +1,181 @@
+Software Testing Notes 4/12
+
+AR's
+- HW 1
+- Lab 2
+- Read ST 2-3
+- Start HW 2
+
+Types of faults and Errors:
+
+-Faults in the interface specification
+-Algorithmic faults
+-Mechanical faults
+-Errors
+
+
+Best method for dealing with faults/errors:
+
+-Verification
+-Modular redundancy
+	Expensive
+-Declaring a bug to be a "feature"
+	Bad move
+-Patching
+-Testing
+	"Dirty work"
+	Done by independent testers
+	Developers focus on ideal situations
+	Don't let end-user catch the issue
+
+
+-Error prevention
+-Error detection
+-Error recovery
+
+
+Develop a test plan:
+
+Test plans include
+-Test objectives
+-Schedule and logistics
+-Test strategies
+-Test cases
+	procedure
+	data
+	expected result
+-Procedures for handling problems
+
+Types of testing:
+
+UNIT Testing
+	Individual subsystem (at the function level)
+	Carried out by developers
+	Goal:confirm subsystems are correctly coded and works as expected
+	
+INTEGRATION testing:
+	Everything together
+
+SYSTEM testing:
+	The entire testing
+	Carried out by developers
+	Goal: determine if the system meets specs
+	
+ACCEPTANCE testing:
+	evaluates system delivered by developers
+	Carried out by client
+	Goal: The see what they want
+
+
+
+Understanding test paths:
+
+White box Vs Black box testing:
+
+
+Reliability: measure of success with which observed behavior of a system conforms to some 
+specific behavior
+
+Failure: Any deviation from the behavior 
+
+Error: The system is in a state that will result in a failure 
+
+Fault (bug): The mechanical or algorithmic cause of an errors 
+
+
+Homework 2 steps:
+Drag into source control center
+Check in via VS
+Add -> existing project -> WPFDesktop
+Change that to be StartUp Project
+Check to make sure runs
+
+Put in requirements from Teller
+VS Team Services
+-> Banking -> Work -> backlogs 
+NEW-> <Add title (as a ... I need...so that...)> -> Add -> double click to add rest
+Add Definition of Done
+X4
+
+Develop a test plan:
+Foundation Server is VSTS URL
+MTM -> login -> add -> Banking/Banking
+Testing center -> New Test Case
+"Customer creation test" -> add Action ->"Launch application" Result: application opens
+add action-> "Enter first name" -> add parameter(@txtFirstName) -> Result: name shows up
+add action-> "Enter last name" -> add parameter(@txtLastName) -> Result: name shows up
+add action-> "Enter deposit" -> add parameter(@txtDeposit) -> Result: deposit shows up
+add action-> "Check checking radio button" -> add parameter(rdbchecking) -> Result: button works
+add action-> "{create customer} button" -> add parameter(button) -> Result: customer shows up in list
+Make sure variables are set, name...lastname...etc
+related work-> link to -> Parent -> banking -> banking teller -> add to story
+
+WpfDesktopApp.exe desktop shortcut
+
+Run a test case:
+Test -> Select case -> Run
+Create action recording -> Start Test -> Launch (Check?) -> Enter name (check?) etc...
+End iteration
+
+
+
+////////////////////////////
+Notes 4/19
+
+S.O.L.I.D.
+S- Single Responsibility Principle
+O- Open Close principle
+L- 
+I- Interface Segregation
+D- Dependency inversion
+
+
+Dynamic Analysis: Black-box, White-box, Data-Structure based testing
+
+White box testing:
+"From the inside"
+	-Looking at the code
+	-Unit Testing
+
+Black box testing:
+"From the outside looking in."
+	-Looking at requirements point of view
+
+
+Data Structure based testing:
+
+Unit testing:
+- A unit test is a piece of code written by a developer that exercises a very small, specific
+area of functionality of the code being tested.
+	-All classes should be tested, All methods should be tested.
+	-Trivial code may be omitted (getters and setters and such)
+	
+Test-driven Development:
+Why?
+	-Helps find design issues early and avoids rework
+	-Writing code to satisfy a test gives less chance of errors
+	-Tests will be more comprehensive than when written after code
+	
+How?
+Write tests before any code
+	-Create test list
+	-pick a test
+	-Write test
+	-compile and failure
+	-Run and fail
+	-Write code to pass test
+	-Remove duplication
+	
+3A method:	
+	//Arrange - How you get your test ready "Prepare variables and such"
+	//Act - Act on the object or method to be tested "Check the thing"
+	//Assert - Validators "Make sure it's right"
+-multiple asserts should be separate test methods!
+
+Develop interfaces:
+
+Visual Studio Test Unit Language:
+
+
+
+
